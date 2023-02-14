@@ -15,6 +15,7 @@
     --color__blue-strong: #035A76;
     --color__purple-strong: #690F8E;
     --color__red-string: #B00024;
+    --color__gray-dark: #333333;
 }
 
 body {
@@ -307,40 +308,112 @@ body {
 
 /* ESTILOS CONTACTO */
 
-.contacto{
+.contacto {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
-.contacto__entrar{
+.contacto__entrar {
     text-align: center;
     width: 95%;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
 }
 
-.contacto__entrar>h2{
+.contacto__entrar>h2 {
     font-size: 1.6em;
 }
+
 .contacto__entrar>h2,
-.contacto__entrar>p{
+.contacto__entrar>p {
     color: var(--color__gray-ligth);
     margin-bottom: 20px;
 }
 
-.contacto>.contacto__institucional>*{
+/* ESTILOS INSTITUCIONAL */
+
+.contacto>.contacto__institucional>* {
     color: var(--color__gray-ligth);
+    width: 100%;
 }
 
-.contacto__institucional>h2{
+.contacto__institucional>h2 {
     text-align: center;
-    padding: 100px 0 20 0;
+    margin: 50px 0 40px 0;
     font-size: 1.4em;
+}
+
+.contacto__institucional>p{
+    text-align: center;
+    font-size: 1.1em;
+}
+.addres{
+    margin: 40px 0 40px 0;
+}
+
+.addres>p{
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
+
+.video{
+    width: 100%;
+    height: 215px;
+    text-align: center;
+    margin: 40px 0 30px 0;
+}
+
+.video>iframe{
+    width: 100vw;
+    height: 100%;
+}
+
+/* ESTILOS FOOTER */
+
+.footer {
+    background-color: var(--color__gray-dark);
+    color: var(--color__white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer>img {
+    width: 50%;
+    margin: 30px 0 40px 0;
+}
+
+.footer>.icons{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 70px;
+}
+
+.footer>nav {
+    margin-bottom: 30px;
+}
+
+.footer>nav>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.footer>nav>ul>li {
+    list-style: none;
+    margin: 0 1em 1em 1em;
+}
+
+.footer>nav>ul>li>a {
+    color: var(--color__white);
+    text-decoration: none;
 }
