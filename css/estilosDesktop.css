@@ -1,0 +1,121 @@
+@media screen and (min-width:1024px) {
+    .head {
+        background-image: var(--bg-intro);
+        background-repeat: no-repeat;
+        /* background-size: auto; */
+    }
+
+    .head>.head__header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .head>.head__header>img {
+        width: 20%;
+        border-bottom: none;
+    }
+
+    .head>.head__header>nav {
+        border-bottom: none;
+    }
+
+    .head>.content {
+        width: 60%;
+    }
+
+    /* ESTILOS DESTACADOS DESKTOP */
+
+    .destacados>img {
+        width: 50%;
+        min-width: 50%;
+    }
+
+    .btn {
+        width: 30%;
+    }
+
+    /* ESTILOS DIFERENCIALES DESKTOP */
+
+    .diferenciales {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color__rosa_ligth);
+    }
+
+    .diferenciales__container {
+        width: 40%;
+    }
+
+    .diferenciales__container>* {
+        width: 50%;
+    }
+
+    /* SOBRE NOSOTROS DESKTOP */
+
+    .nosotros__container {
+        display: flex;
+        align-items: start;
+    }
+
+    .sobreNosotros {
+        width: 65%;
+    }
+
+    .nosotros__container>.image {
+        margin: 1em 0;
+        width: 30%;
+        height: 500px;
+        background-image: var(--bg-lateral);
+        background-repeat: no-repeat;
+    }
+
+    /* PLANES DESKTOP */
+
+    .planes>.cards {
+        flex-direction: row;
+    }
+
+
+    /* CONTACTO */
+
+    .contacto {
+        /* flex-direction: row; */
+    }
+
+    .contacto__institucional {
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-evenly;
+        margin-top: 2em;
+    }
+
+    .contacto__institucional-content>* {
+        padding-top: 0;
+    }
+
+    .video {
+        margin: 0;
+        width: 30%;
+    }
+
+    /* FOOTER DESKTOP */
+
+    .footer__content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+
+    .footer__content>img {
+        width: 20%;
+        margin: 30px 0 40px 0;
+    }
+
+    .footer__content>.icons {
+        width: auto;
+    }
+}

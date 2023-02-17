@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+
+    /* ESTILOS HEADER TABLET */
+
+    .head {
+        font-size: 1em;
+    }
+
+    .head>img {
+        width: 25%;
+        margin-bottom: .9em;
+    }
+
+    .head>.content>button {
+        width: 50%;
+    }
+
+    .destacados>img {
+        width: 70%;
+        min-width: 70%;
+    }
+
+    .btn {
+        width: 50%;
+    }
+
+    /* ESTILOS DIFERECIALES TABLET */
+
+    .diferenciales {
+        width: 50%;
+    }
+
+    /* ESTILOS PLANES TABLET */
+    /* 
+    .planes>.card{
+        width: 100%;
+    } */
+
+    /* ESTILOS INSTITUCIONAL TABLET */
+    
+    address>p {
+        display: inline-block;
+    }
+
+    .video {
+        width: 80%;
+    }
+
+    /* ESTILOS FOOTER TABLET */
+
+    .footer>img {
+        width: 25%;
+    }
+}

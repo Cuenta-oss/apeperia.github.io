@@ -25,6 +25,11 @@
 
     --open-sans: 'Open Sans', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
+
+    /* BACKGROUD IMAGE */
+
+    --bg-intro: url("../img/bg-intro.jpg");
+    --bg-lateral: url("../img/sobre-apeperia.png")
 }
 
 body {
@@ -34,36 +39,41 @@ body {
 /* ESTILOS HEADER */
 .head {
     background-color: var(--color__green-dark);
-    color: var(--color__white);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid var(--color__azul-ligth);
-    height: 522px;
 }
 
-.head>img {
+.head>.head__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head>.head__header>img {
     width: 50%;
     margin-bottom: .9em;
 }
 
-.head>nav {
+.head>.head__header>nav {
     border-bottom: 1px solid var(--color__azul-ligth);
+    font-family: var(--open-sans);
 }
 
-.head>nav>ul {
+.head>.head__header>nav>ul {
+    /* width: 100%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
 }
 
-.head>nav>ul>li {
+.head>.head__header>nav>ul>li {
     list-style: none;
-    margin: 0 1em 1em 1em;
+    margin: 1em 1em 1em 1em;
 }
 
-.head>nav>ul>li>a {
+.head>.head__header>nav>ul>li>a {
     color: var(--color__white);
     text-decoration: none;
 }
@@ -81,22 +91,25 @@ body {
     font-size: 2.4em;
     text-align: center;
     padding: 20px 30px 0 30px;
+    font-family: var(--montserrat);
+    font-weight: bold;
+    color: var(--color__white);
 }
 
 .head>.content>p {
     text-align: center;
     padding: 0 40px 0 40px;
     font-size: 1.2em;
+    font-family: var(--open-sans);
+    color: var(--color__white);
 }
 
 .head>.content>button {
     width: 95%;
-    /* border: ; */
+    font-family: var(--open-sans);
     background-color: transparent;
     height: 50px;
-    /* padding: 0 5px 20px 5px; */
-    /* text-align: center; */
-    margin-bottom: 20px;
+    margin-bottom: 3em;
     color: var(--color__white);
     font-size: 1.1em;
     font-weight: bold;
@@ -108,7 +121,6 @@ body {
 /* ESTILOS MAIN-CONTENT */
 
 .destacados {
-    height: auto;
     width: 100%;
     background-color: var(--color__blue-clear);
     display: flex;
@@ -120,10 +132,14 @@ body {
     padding: 1.3em 0;
     color: var(--color__gray-ligth);
     font-size: 1.7em;
+    font-weight: bold;
+    font-family: var(--montserrat);
 }
 
 .destacados>img {
     width: 100%;
+    min-width: 100vw;
+    margin: 0 auto;
 }
 
 .destacados>p {
@@ -154,22 +170,34 @@ body {
 /* ESTILOS DIFERENCIALES */
 
 .diferenciales {
-    width: 100%;
-    margin: 5em 0;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 3em 0;
     font-family: var(--open-sans);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .diferenciales__container {
     display: flex;
-    margin-left: 3em;
     align-items: center;
+    flex-direction: column;
     /* text-align: center; */
     /* width: 50%; */
     color: var(--color__gray-ligth);
-    margin-bottom: 2em;
+    width: 80%;
+    padding: 1em;
 }
 
-.diferenciales__container>img {
+.diferenciales__container--main {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.4em;
+    align-items: center;
+}
+
+.diferenciales__container--main>img {
     margin-right: .8em;
 }
 
@@ -193,11 +221,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    padding: 1em 0;
 }
 
 .sobreNosotros>h2 {
     font-family: var(--montserrat);
+    font-weight: bold;
     font-size: 1.7em;
     margin-bottom: 1em;
     color: var(--color__gray-ligth);
@@ -207,10 +236,11 @@ body {
     width: 85%;
     margin-bottom: 1em;
     font-family: var(--open-sans);
-    font-size: 1.2em;
+    font-size: 1.04em;
 }
 
 .sobreNosotros>.bold {
+    color: var(--color__gray-ligth);
     font-weight: bold;
 }
 
@@ -235,36 +265,47 @@ body {
 .planes>h2 {
     color: var(--color__gray-ligth);
     text-align: center;
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.4em;
 }
 
-.planes>.card {
-    width: 80%;
-    /* border: 1px solid; */
+.planes>.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.planes>.cards>.card {
+    width: 100%;
     margin: 1.4em 0 0 0;
     background-color: var(--color__white);
     border-radius: .8em;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.063);
 }
 
-.planes>.card>h3 {
+.planes>.cards>.card>h3 {
     text-align: center;
     padding: .8em;
     border-bottom: 1px solid var(--color__blue-clear);
     font-size: 1.5em;
+    font-weight: bold;
 }
 
-.planes>.card>h1 {
+.planes>.cards>.card>h1 {
     text-align: center;
     font-size: 2.4em;
     margin: 10px 0;
+    font-weight: bold;
 }
 
-.planes>.card>p {
+.planes>.cards>.card>p {
     padding: .5em 2em;
     color: var(--color__gray-ligth);
 }
 
-.planes>.card>button {
+.planes>.cards>.card>button {
     width: 60%;
     padding: 15px;
     margin: 1.4em auto;
@@ -276,41 +317,41 @@ body {
     background-color: transparent;
 }
 
-.planes>.card__blue>h3 {
+.planes>.cards>.card__blue>h3 {
     color: var(--color__blue-strong);
 }
 
-.planes>.card__blue>h1 {
+.planes>.cards>.card__blue>h1 {
     color: var(--color__blue-strong);
 }
 
-.planes>.card__blue>button {
+.planes>.cards>.card__blue>button {
     color: var(--color__blue-strong);
     border: 2px solid var(--color__blue-strong);
 }
 
-.planes>.card__purple>h3 {
+.planes>.cards>.card__purple>h3 {
     color: var(--color__purple-strong);
 }
 
-.planes>.card__purple>h1 {
+.planes>.cards>.card__purple>h1 {
     color: var(--color__purple-strong);
 }
 
-.planes>.card__purple>button {
+.planes>.cards>.card__purple>button {
     color: var(--color__purple-strong);
     border: 2px solid var(--color__purple-strong);
 }
 
-.planes>.card__red>h3 {
+.planes>.cards>.card__red>h3 {
     color: var(--color__red-string);
 }
 
-.planes>.card__red>h1 {
+.planes>.cards>.card__red>h1 {
     color: var(--color__red-string);
 }
 
-.planes>.card__red>button {
+.planes>.cards>.card__red>button {
     color: var(--color__red-string);
     border: 2px solid var(--color__red-string);
 }
@@ -336,57 +377,66 @@ body {
 }
 
 .contacto__entrar>h2 {
-    font-size: 1.6em;
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.4em;
 }
 
 .contacto__entrar>h2,
 .contacto__entrar>p {
     color: var(--color__gray-ligth);
     margin-bottom: 20px;
+
+}
+
+.contacto__entrar>p {
+    font-weight: 500;
 }
 
 /* ESTILOS INSTITUCIONAL */
 
-.contacto>.contacto__institucional>* {
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.4em 0;
+}
+
+.contact__container-title>h2 {
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 1.4em;
     color: var(--color__gray-ligth);
-    width: 100%;
 }
 
-.contacto__institucional>h2 {
-    text-align: center;
-    margin: 50px 0 40px 0;
-    font-size: 1.4em;
+.contacto__institucional{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contacto__institucional>p,
-.contacto__institucional>address>.addres>p {
+.contacto__institucional-content>*{
     text-align: center;
-    font-size: 1.4em;
+    padding-top: 1.4em;
     font-family: var(--open-sans);
-    font-style: normal;
-}
-
-.contacto__institucional>address>p {
-    text-align: center;
-    font-size: 1.2em;
-    /* font-family: var(--open-sans); */
-    font-style: normal;
-
 }
 
 .addres {
-    margin: 40px 0 40px 0;
+    margin: 10px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .addres>p {
     font-size: 1.7em;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-family: var(--open-sans);
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .video {
-    width: 100%;
+    width: 100vw;
     margin: 40px 0 30px 0;
 }
 
@@ -400,20 +450,29 @@ body {
     align-items: center;
 }
 
-.footer>img {
+.footer__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__content>img {
     width: 50%;
     margin: 30px 0 40px 0;
 }
 
-.footer>.icons {
+.footer__content>.icons {
     width: 70%;
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 70px;
+    justify-content: center;
+    /* margin-bottom: 70px; */
+}
+
+.footer__content>.icons>a {
+    margin: 0 1em;
 }
 
 .footer>nav {
-    margin-bottom: 30px;
+    margin: 40px 0 30px 0;
 }
 
 .footer>nav>ul {
